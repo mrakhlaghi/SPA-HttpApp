@@ -1,0 +1,48 @@
+.newComment{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(248 248 248 / 57%);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+    width: 600px;
+    height: 280px;
+    margin: auto;
+    padding: 20px  30px ; 
+    color: rgb(108 68 170);
+    border-radius: 5px; 
+}
+.newComment h2{
+  color: rgb(108 68 170);
+  margin-bottom: 30px;
+}
+
+
+.btn{
+  cursor: pointer;
+    outline: none;
+    padding: 5px 10px ;
+    background-color: #f1e3f1;
+    color:#df638b ;
+    border-radius: 5px;
+    border: 1px solid #df638b;
+    margin-top: 10px;
+  }
+  .primary{
+    color: #fff;
+    background-color: #936bd2;
+    border: none;
+    padding: 8px 10px ;
+  }
+  .newComment_section{
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+    margin-bottom: 10px;
+  }
+  .newComment_section input,.newComment_section textarea{
+    width: 200px;
+    height: 25px;
+  }

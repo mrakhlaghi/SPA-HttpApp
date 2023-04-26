@@ -1,0 +1,22 @@
+.fullComment{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(248 248 248 / 57%);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+    color: #4338ca;
+    border-radius: 5px; 
+    height: 350px;
+    width: 400px;
+}
+.fullComment_content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 80%;
+    height: 200px;
+    margin-bottom: 20px;
+}
