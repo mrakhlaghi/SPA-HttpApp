@@ -25,7 +25,7 @@ const CommentsList = () => {
   const renderComments = () => {
     let renderedValue = <p className="align-center">Loading ... </p>;
     if (error) {
-      renderedValue = <p>Fetching data failed ! </p>;
+      renderedValue = <p className="align-center">Fetching data failed ! </p>;
       toast.error("there is an error !");
     }
     if (comments && !error) {
