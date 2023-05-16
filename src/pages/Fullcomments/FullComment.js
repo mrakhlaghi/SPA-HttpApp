@@ -1,16 +1,14 @@
 import { useEffect, useState } from "react";
 import "./FullComment.css";
-import { deleteComment } from "../../container/deleteCommentService";
 import { getOneComment } from "../../component/services/getOneCommentsService";
 import { useParams, useNavigate } from "react-router-dom";
+import { deleteComment } from "../../component/services/deleteCommentService";
 
 const FullComment = () => {
   const [comment, setComment] = useState(null);
   const params = useParams();
   let navigate = useNavigate();
   let commentId = params.id;
-  console.log(navigate);
-  console.log(commentId);
   const styles = {
     color: "#444",
     backgroundColor: !commentId ? "#efefef" : "red",
@@ -26,8 +24,8 @@ const FullComment = () => {
   useEffect(() => {
     if (commentId) {
       getOneComment(commentId)
-        .then((res) => {
-          setComment(res.data);
+      .then((res) => {
+        setComment(res.data);
         })
         .catch((err) => {
           console.log(err);

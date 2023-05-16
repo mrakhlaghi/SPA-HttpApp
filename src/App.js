@@ -4,6 +4,9 @@ import 'react-toastify/dist/ReactToastify.css';
 import Layout from './Layout/Layout';
 import { Route, Routes } from 'react-router-dom';
 import routes from './routes';
+import './mock/mock';
+
+
 
 function App() {
   return(

@@ -7,5 +7,5 @@ export function addNewComments(data){
             Authorization:`Bearer ${token}`,
         }
     }
-    return http.post("",data,header)
+    return http.post("/",data,header)
 }

@@ -3,7 +3,6 @@ import { NavLink } from "react-router-dom";
 const items=[
     {name:"Home" , to:"/"},
     {name:"New comment" , to:"/new-comment"},
-   
 ]
 
 const Navigation = () => {

@@ -1,10 +1,10 @@
 import axios from "axios";
-axios.defaults.baseURL = "http://localhost:3004/comments";
+axios.defaults.baseURL = "/comments";
 // axios.defaults.headers.common['Authorization']='AUTH_TOKEN';
 
 axios.interceptors.response.use(
   (response) => {
-    console.log(response);
+    // console.log(response);
     // Edit response , ...
     return response
   },
@@ -15,7 +15,7 @@ axios.interceptors.response.use(
 );
 axios.interceptors.request.use(
   (request) => {
-    console.log(request);
+    // console.log(request);
     // Edit response , ...
     return request
   },

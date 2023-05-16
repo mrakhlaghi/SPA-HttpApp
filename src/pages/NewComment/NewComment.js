@@ -1,25 +1,30 @@
-import { useState } from "react";
+import { createRef, useEffect, useState } from "react";
 import "./NewComment.css";
-import { getAllComments } from "../../component/services/getAllCommentsService";
 import { addNewComments } from "../../component/services/addNewCommentsService";
 import { useNavigate } from "react-router-dom";
 
 const NewComment = () => {
   const [comment, setComment] = useState({
+    id: null,
     name: "",
     email: "",
     body: "",
   });
   const navigate = useNavigate();
+  const inputRef=createRef()
+
+  useEffect(()=>{
+  inputRef.current.focus()
+
+  },[inputRef])
   const changeHandler = (e) => {
     setComment({ ...comment, [e.target.name]: e.target.value });
   };
 
   const postCommentHandler = async () => {
+    let newComment={ ...comment, id: Date.now() }
     try {
-      await addNewComments({ ...comment, postId: 10 });
-      // const { data } = await getAllComments();
-      // setComments(data);
+      await addNewComments(newComment);
       navigate("/");
     } catch (error) {}
   };
@@ -29,7 +34,7 @@ const NewComment = () => {
       <h2>Add new comment</h2>
       <div className="newComment_section">
         <label>name</label>
-        <input name="name" type="text" onChange={changeHandler} />
+        <input ref={inputRef} name="name" type="text" onChange={changeHandler} />
       </div>
       <div className="newComment_section">
         <label>email</label>
