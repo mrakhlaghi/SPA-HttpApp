@@ -1,4 +1,9 @@
 # Getting Started with Create React App
+# Live and Deployed version [here](https://6463e8df5c8a28137014c944--dazzling-kelpie-45cedb.netlify.app/)
+
+![spa http preview](https://github.com/mrakhlaghi/SPA-HttpApp/assets/103969331/896268cc-faa2-48a9-96dd-8db26f351a24)
+
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
