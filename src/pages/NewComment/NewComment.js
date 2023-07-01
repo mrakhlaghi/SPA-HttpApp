@@ -16,7 +16,7 @@ const NewComment = () => {
   useEffect(()=>{
   inputRef.current.focus()
 
-  },[inputRef])
+  },[])
   const changeHandler = (e) => {
     setComment({ ...comment, [e.target.name]: e.target.value });
   };
